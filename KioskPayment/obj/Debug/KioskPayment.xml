@@ -1,0 +1,118 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+KioskPayment
+</name>
+</assembly>
+<members>
+<member name="P:KioskPayment.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:KioskPayment.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="P:KioskPayment.My.Resources.Resources.frmPaymentCashSumBG">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="T:KioskPayment.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="M:KioskPayment.FileService.EquipmentFileService.#ctor">
+	<remarks/>
+</member><member name="E:KioskPayment.FileService.EquipmentFileService.GetFileByteStreamFromDCCompleted">
+	<remarks/>
+</member><member name="E:KioskPayment.FileService.EquipmentFileService.GetFileInfoFromDCCompleted">
+	<remarks/>
+</member><member name="E:KioskPayment.FileService.EquipmentFileService.UpdateTransferStatusCompleted">
+	<remarks/>
+</member><member name="E:KioskPayment.FileService.EquipmentFileService.ErrorMessageCompleted">
+	<remarks/>
+</member><member name="E:KioskPayment.FileService.EquipmentFileService.GetBillerLogoFileCompleted">
+	<remarks/>
+</member><member name="E:KioskPayment.FileService.EquipmentFileService.DeleteBillerLogoFileCompleted">
+	<remarks/>
+</member><member name="M:KioskPayment.FileService.EquipmentFileService.GetFileByteStreamFromDC(System.String)">
+	<remarks/>
+</member><member name="M:KioskPayment.FileService.EquipmentFileService.GetFileByteStreamFromDCAsync(System.String)">
+	<remarks/>
+</member><member name="M:KioskPayment.FileService.EquipmentFileService.GetFileByteStreamFromDCAsync(System.String,System.Object)">
+	<remarks/>
+</member><member name="M:KioskPayment.FileService.EquipmentFileService.GetFileInfoFromDC(System.String,System.String,System.String)">
+	<remarks/>
+</member><member name="M:KioskPayment.FileService.EquipmentFileService.GetFileInfoFromDCAsync(System.String,System.String,System.String)">
+	<remarks/>
+</member><member name="M:KioskPayment.FileService.EquipmentFileService.GetFileInfoFromDCAsync(System.String,System.String,System.String,System.Object)">
+	<remarks/>
+</member><member name="M:KioskPayment.FileService.EquipmentFileService.UpdateTransferStatus(System.String)">
+	<remarks/>
+</member><member name="M:KioskPayment.FileService.EquipmentFileService.UpdateTransferStatusAsync(System.String)">
+	<remarks/>
+</member><member name="M:KioskPayment.FileService.EquipmentFileService.UpdateTransferStatusAsync(System.String,System.Object)">
+	<remarks/>
+</member><member name="M:KioskPayment.FileService.EquipmentFileService.ErrorMessage">
+	<remarks/>
+</member><member name="M:KioskPayment.FileService.EquipmentFileService.ErrorMessageAsync">
+	<remarks/>
+</member><member name="M:KioskPayment.FileService.EquipmentFileService.ErrorMessageAsync(System.Object)">
+	<remarks/>
+</member><member name="M:KioskPayment.FileService.EquipmentFileService.GetBillerLogoFile">
+	<remarks/>
+</member><member name="M:KioskPayment.FileService.EquipmentFileService.GetBillerLogoFileAsync">
+	<remarks/>
+</member><member name="M:KioskPayment.FileService.EquipmentFileService.GetBillerLogoFileAsync(System.Object)">
+	<remarks/>
+</member><member name="M:KioskPayment.FileService.EquipmentFileService.DeleteBillerLogoFile(System.String)">
+	<remarks/>
+</member><member name="M:KioskPayment.FileService.EquipmentFileService.DeleteBillerLogoFileAsync(System.String)">
+	<remarks/>
+</member><member name="M:KioskPayment.FileService.EquipmentFileService.DeleteBillerLogoFileAsync(System.String,System.Object)">
+	<remarks/>
+</member><member name="M:KioskPayment.FileService.EquipmentFileService.CancelAsync(System.Object)">
+	<remarks/>
+</member><member name="T:KioskPayment.FileService.EquipmentFileService">
+	<remarks/>
+</member><member name="T:KioskPayment.FileService.GetFileByteStreamFromDCCompletedEventHandler">
+	<remarks/>
+</member><member name="P:KioskPayment.FileService.GetFileByteStreamFromDCCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="T:KioskPayment.FileService.GetFileByteStreamFromDCCompletedEventArgs">
+	<remarks/>
+</member><member name="T:KioskPayment.FileService.GetFileInfoFromDCCompletedEventHandler">
+	<remarks/>
+</member><member name="P:KioskPayment.FileService.GetFileInfoFromDCCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="T:KioskPayment.FileService.GetFileInfoFromDCCompletedEventArgs">
+	<remarks/>
+</member><member name="T:KioskPayment.FileService.UpdateTransferStatusCompletedEventHandler">
+	<remarks/>
+</member><member name="P:KioskPayment.FileService.UpdateTransferStatusCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="T:KioskPayment.FileService.UpdateTransferStatusCompletedEventArgs">
+	<remarks/>
+</member><member name="T:KioskPayment.FileService.ErrorMessageCompletedEventHandler">
+	<remarks/>
+</member><member name="P:KioskPayment.FileService.ErrorMessageCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="T:KioskPayment.FileService.ErrorMessageCompletedEventArgs">
+	<remarks/>
+</member><member name="T:KioskPayment.FileService.GetBillerLogoFileCompletedEventHandler">
+	<remarks/>
+</member><member name="P:KioskPayment.FileService.GetBillerLogoFileCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="T:KioskPayment.FileService.GetBillerLogoFileCompletedEventArgs">
+	<remarks/>
+</member><member name="T:KioskPayment.FileService.DeleteBillerLogoFileCompletedEventHandler">
+	<remarks/>
+</member><member name="P:KioskPayment.FileService.DeleteBillerLogoFileCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="T:KioskPayment.FileService.DeleteBillerLogoFileCompletedEventArgs">
+	<remarks/>
+</member>
+</members>
+</doc>

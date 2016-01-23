@@ -1,0 +1,16 @@
+D:\Work_Bizthug\DTAC\DTAC-SSK\LinqDB\bin\Debug\LinqDB.dll
+D:\Work_Bizthug\DTAC\DTAC-SSK\LinqDB\bin\Debug\LinqDB.pdb
+D:\Work_Bizthug\DTAC\DTAC-SSK\LinqDB\bin\Debug\LinqDB.xml
+D:\Work_Bizthug\DTAC\DTAC-SSK\LinqDB\obj\Debug\LinqDB.Resources.resources
+D:\Work_Bizthug\DTAC\DTAC-SSK\LinqDB\obj\Debug\LinqDB.vbproj.GenerateResource.Cache
+D:\Work_Bizthug\DTAC\DTAC-SSK\LinqDB\obj\Debug\LinqDB.dll
+D:\Work_Bizthug\DTAC\DTAC-SSK\LinqDB\obj\Debug\LinqDB.xml
+D:\Work_Bizthug\DTAC\DTAC-SSK\LinqDB\obj\Debug\LinqDB.pdb
+D:\MyProject\DTAC-SSK\LinqDB\bin\Debug\LinqDB.dll
+D:\MyProject\DTAC-SSK\LinqDB\bin\Debug\LinqDB.pdb
+D:\MyProject\DTAC-SSK\LinqDB\bin\Debug\LinqDB.xml
+D:\MyProject\DTAC-SSK\LinqDB\obj\Debug\LinqDB.Resources.resources
+D:\MyProject\DTAC-SSK\LinqDB\obj\Debug\LinqDB.vbproj.GenerateResource.Cache
+D:\MyProject\DTAC-SSK\LinqDB\obj\Debug\LinqDB.dll
+D:\MyProject\DTAC-SSK\LinqDB\obj\Debug\LinqDB.xml
+D:\MyProject\DTAC-SSK\LinqDB\obj\Debug\LinqDB.pdb

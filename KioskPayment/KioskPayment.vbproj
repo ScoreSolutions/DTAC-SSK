@@ -1,0 +1,436 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3DA1561A-F1F6-4375-80B7-C8B4F36CE337}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>KioskPayment.My.MyApplication</StartupObject>
+    <RootNamespace>KioskPayment</RootNamespace>
+    <AssemblyName>KioskPayment</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>KioskPayment.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>KioskPayment.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="axinterop.acropdflib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\axinterop.acropdflib.dll</HintPath>
+    </Reference>
+    <Reference Include="AxInterop.WMPLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\AxInterop.WMPLib.dll</HintPath>
+    </Reference>
+    <Reference Include="interop.acropdflib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>bin\Debug\interop.acropdflib.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.WMPLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>bin\Debug\Interop.WMPLib.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.0.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="WebCam_Capture, Version=1.0.2395.24959, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\WebCam_Capture.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Engine\CountMoneyENG.vb" />
+    <Compile Include="Engine\FunctionENG.vb" />
+    <Compile Include="Engine\Print.vb" />
+    <Compile Include="frmBillPaymentSearchBiller.Designer.vb">
+      <DependentUpon>frmBillPaymentSearchBiller.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmBillPaymentSearchBiller.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBillPaymentSelectBillerType.Designer.vb">
+      <DependentUpon>frmBillPaymentSelectBillerType.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmBillPaymentSelectBillerType.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOutOfService.Designer.vb">
+      <DependentUpon>frmOutOfService.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmOutOfService.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQuestionNare.Designer.vb">
+      <DependentUpon>frmQuestionNare.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmQuestionNare.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPaymentCashSum.Designer.vb">
+      <DependentUpon>frmPaymentCashSum.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPaymentCashSum.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTransferInputMoneyAmount.Designer.vb">
+      <DependentUpon>frmTransferInputMoneyAmount.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTransferInputMoneyAmount.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaymentSlipENG.vb" />
+    <Compile Include="frmBillPaymentSum.Designer.vb">
+      <DependentUpon>frmBillPaymentSum.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmBillPaymentSum.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChangeLanguage.Designer.vb">
+      <DependentUpon>frmChangeLanguage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmChangeLanguage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConfirmToOtherService.Designer.vb">
+      <DependentUpon>frmConfirmToOtherService.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmConfirmToOtherService.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPaymentCash.Designer.vb">
+      <DependentUpon>frmPaymentCash.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPaymentCash.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInputMobileNo.Designer.vb">
+      <DependentUpon>frmInputMobileNo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmInputMobileNo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPaymentCredit.Designer.vb">
+      <DependentUpon>frmPaymentCredit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPaymentCredit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPaymentCreditSign.Designer.vb">
+      <DependentUpon>frmPaymentCreditSign.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPaymentCreditSign.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPaymentReceipt.Designer.vb">
+      <DependentUpon>frmPaymentReceipt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPaymentReceipt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPaySlip.Designer.vb">
+      <DependentUpon>frmPaySlip.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPaySlip.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmScreenSaver.Designer.vb">
+      <DependentUpon>frmScreenSaver.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmScreenSaver.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSelectPaymentType.Designer.vb">
+      <DependentUpon>frmSelectPaymentType.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSelectPaymentType.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBillPaymentScanBarcode.Designer.vb">
+      <DependentUpon>frmBillPaymentScanBarcode.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmBillPaymentScanBarcode.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSelectService.Designer.vb">
+      <DependentUpon>frmSelectService.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSelectService.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSoryForReturn.Designer.vb">
+      <DependentUpon>frmSoryForReturn.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSoryForReturn.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThankYou.Designer.vb">
+      <DependentUpon>frmThankYou.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmThankYou.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTopUpSelectMoney.Designer.vb">
+      <DependentUpon>frmTopUpSelectMoney.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTopUpSelectMoney.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTopUpSum.Designer.vb">
+      <DependentUpon>frmTopUpSum.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTopUpSum.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTransferCustomerInfo.Designer.vb">
+      <DependentUpon>frmTransferCustomerInfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTransferCustomerInfo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTransferInsertIDCard.Designer.vb">
+      <DependentUpon>frmTransferInsertIDCard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTransferInsertIDCard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTransferSum.Designer.vb">
+      <DependentUpon>frmTransferSum.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTransferSum.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HWAdaptor\BankNoteAcceptor.vb" />
+    <Compile Include="HWAdaptor\BarcodeScanner.vb" />
+    <Compile Include="HWAdaptor\EDC.vb" />
+    <Compile Include="IniReader.vb" />
+    <Compile Include="frmInputMoneyAmount.Designer.vb">
+      <DependentUpon>frmInputMoneyAmount.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmInputMoneyAmount.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KioskPaymentModule.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Web References\FileService\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="WebCam.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frmBillPaymentSearchBiller.resx">
+      <DependentUpon>frmBillPaymentSearchBiller.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBillPaymentSelectBillerType.resx">
+      <DependentUpon>frmBillPaymentSelectBillerType.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBillPaymentSum.resx">
+      <DependentUpon>frmBillPaymentSum.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChangeLanguage.resx">
+      <DependentUpon>frmChangeLanguage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConfirmToOtherService.resx">
+      <DependentUpon>frmConfirmToOtherService.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOutOfService.resx">
+      <DependentUpon>frmOutOfService.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPaymentCash.resx">
+      <DependentUpon>frmPaymentCash.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInputMobileNo.resx">
+      <DependentUpon>frmInputMobileNo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPaymentCredit.resx">
+      <DependentUpon>frmPaymentCredit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPaymentCreditSign.resx">
+      <DependentUpon>frmPaymentCreditSign.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPaymentReceipt.resx">
+      <DependentUpon>frmPaymentReceipt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPaySlip.resx">
+      <DependentUpon>frmPaySlip.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuestionNare.resx">
+      <DependentUpon>frmQuestionNare.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmScreenSaver.resx">
+      <DependentUpon>frmScreenSaver.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSelectPaymentType.resx">
+      <DependentUpon>frmSelectPaymentType.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBillPaymentScanBarcode.resx">
+      <DependentUpon>frmBillPaymentScanBarcode.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSelectService.resx">
+      <DependentUpon>frmSelectService.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSoryForReturn.resx">
+      <DependentUpon>frmSoryForReturn.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPaymentCashSum.resx">
+      <DependentUpon>frmPaymentCashSum.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThankYou.resx">
+      <DependentUpon>frmThankYou.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInputMoneyAmount.resx">
+      <DependentUpon>frmInputMoneyAmount.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTopUpSelectMoney.resx">
+      <DependentUpon>frmTopUpSelectMoney.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTopUpSum.resx">
+      <DependentUpon>frmTopUpSum.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTransferCustomerInfo.resx">
+      <DependentUpon>frmTransferCustomerInfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTransferInputMoneyAmount.resx">
+      <DependentUpon>frmTransferInputMoneyAmount.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTransferInsertIDCard.resx">
+      <DependentUpon>frmTransferInsertIDCard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTransferSum.resx">
+      <DependentUpon>frmTransferSum.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="Web References\FileService\EquipmentFileService.wsdl" />
+    <None Include="Web References\FileService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LinqDB\LinqDB.vbproj">
+      <Project>{e20606c6-6aad-4643-a0a1-3636cdf25477}</Project>
+      <Name>LinqDB</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\Background\frmPaymentCashSumBG.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://akkarawatp/webtms/EquipmentFileService.asmx%3fWSDL">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\FileService\</RelPath>
+      <UpdateFromURL>http://akkarawatp/webtms/EquipmentFileService.asmx%3fWSDL</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>KioskPayment_FileService_EquipmentFileService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

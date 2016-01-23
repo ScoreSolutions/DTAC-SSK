@@ -1,0 +1,709 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="SendFileToDC">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FileByte" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="FileName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MachineName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendFileToDCResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SendFileToDCResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadFileFromDC">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FileName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadFileFromDCResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadFileFromDCResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendMonitorFileToDC">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FileByte" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="FileName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MachineName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendMonitorFileToDCResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SendMonitorFileToDCResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadMonitorFileFromDC">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ServerName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadMonitorFileFromDCResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadMonitorFileFromDCResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendConfigFileToDC">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FileByte" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="FileName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MachineName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendConfigFileToDCResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SendConfigFileToDCResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadConfigFileFromDC">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ServerName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadConfigFileFromDCResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadConfigFileFromDCResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteConfigFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="XMLConfigFileName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="RepQty" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteConfigFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteConfigFileResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendAlarm">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SysLocation" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="HostIP" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="HostName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AlarmType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AlarmName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Severity" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AlarmValue" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Desc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FlagClear" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AlarmMethod" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendAlarmResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SendAlarmResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAlarmByServerName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ServerName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAlarmByServerNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAlarmByServerNameResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InserAlarmWaitingClear">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sql" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InserAlarmWaitingClearResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InserAlarmWaitingClearResult" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateAlarmWaitingClear">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DCAlarmWaitingClearID" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateAlarmWaitingClearResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateAlarmWaitingClearResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendClearAlarm">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DCAlarmWaitingClearID" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendClearAlarmResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SendClearAlarmResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddConfigPort">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ServerName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IPAddress" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="PortNumber" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="ChkSun" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ChkMon" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ChkTue" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ChkWed" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ChkThu" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ChkFri" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ChkSat" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ChkAllDay" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AlarmTimeFrom" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AlarmTimeTo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddConfigPortResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddConfigPortResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetConfigPortList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="whText" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetConfigPortListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetConfigPortListResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteConfigPortList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteConfigPortListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteConfigPortListResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SendFileToDCSoapIn">
+    <wsdl:part name="parameters" element="tns:SendFileToDC" />
+  </wsdl:message>
+  <wsdl:message name="SendFileToDCSoapOut">
+    <wsdl:part name="parameters" element="tns:SendFileToDCResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadFileFromDCSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadFileFromDC" />
+  </wsdl:message>
+  <wsdl:message name="LoadFileFromDCSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadFileFromDCResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendMonitorFileToDCSoapIn">
+    <wsdl:part name="parameters" element="tns:SendMonitorFileToDC" />
+  </wsdl:message>
+  <wsdl:message name="SendMonitorFileToDCSoapOut">
+    <wsdl:part name="parameters" element="tns:SendMonitorFileToDCResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadMonitorFileFromDCSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadMonitorFileFromDC" />
+  </wsdl:message>
+  <wsdl:message name="LoadMonitorFileFromDCSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadMonitorFileFromDCResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendConfigFileToDCSoapIn">
+    <wsdl:part name="parameters" element="tns:SendConfigFileToDC" />
+  </wsdl:message>
+  <wsdl:message name="SendConfigFileToDCSoapOut">
+    <wsdl:part name="parameters" element="tns:SendConfigFileToDCResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadConfigFileFromDCSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadConfigFileFromDC" />
+  </wsdl:message>
+  <wsdl:message name="LoadConfigFileFromDCSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadConfigFileFromDCResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteConfigFileSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteConfigFile" />
+  </wsdl:message>
+  <wsdl:message name="DeleteConfigFileSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteConfigFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendAlarmSoapIn">
+    <wsdl:part name="parameters" element="tns:SendAlarm" />
+  </wsdl:message>
+  <wsdl:message name="SendAlarmSoapOut">
+    <wsdl:part name="parameters" element="tns:SendAlarmResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAlarmByServerNameSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAlarmByServerName" />
+  </wsdl:message>
+  <wsdl:message name="GetAlarmByServerNameSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAlarmByServerNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="InserAlarmWaitingClearSoapIn">
+    <wsdl:part name="parameters" element="tns:InserAlarmWaitingClear" />
+  </wsdl:message>
+  <wsdl:message name="InserAlarmWaitingClearSoapOut">
+    <wsdl:part name="parameters" element="tns:InserAlarmWaitingClearResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAlarmWaitingClearSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateAlarmWaitingClear" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAlarmWaitingClearSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateAlarmWaitingClearResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendClearAlarmSoapIn">
+    <wsdl:part name="parameters" element="tns:SendClearAlarm" />
+  </wsdl:message>
+  <wsdl:message name="SendClearAlarmSoapOut">
+    <wsdl:part name="parameters" element="tns:SendClearAlarmResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddConfigPortSoapIn">
+    <wsdl:part name="parameters" element="tns:AddConfigPort" />
+  </wsdl:message>
+  <wsdl:message name="AddConfigPortSoapOut">
+    <wsdl:part name="parameters" element="tns:AddConfigPortResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetConfigPortListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetConfigPortList" />
+  </wsdl:message>
+  <wsdl:message name="GetConfigPortListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetConfigPortListResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteConfigPortListSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteConfigPortList" />
+  </wsdl:message>
+  <wsdl:message name="DeleteConfigPortListSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteConfigPortListResponse" />
+  </wsdl:message>
+  <wsdl:portType name="FaultManagementServiceSoap">
+    <wsdl:operation name="SendFileToDC">
+      <wsdl:input message="tns:SendFileToDCSoapIn" />
+      <wsdl:output message="tns:SendFileToDCSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadFileFromDC">
+      <wsdl:input message="tns:LoadFileFromDCSoapIn" />
+      <wsdl:output message="tns:LoadFileFromDCSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendMonitorFileToDC">
+      <wsdl:input message="tns:SendMonitorFileToDCSoapIn" />
+      <wsdl:output message="tns:SendMonitorFileToDCSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadMonitorFileFromDC">
+      <wsdl:input message="tns:LoadMonitorFileFromDCSoapIn" />
+      <wsdl:output message="tns:LoadMonitorFileFromDCSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendConfigFileToDC">
+      <wsdl:input message="tns:SendConfigFileToDCSoapIn" />
+      <wsdl:output message="tns:SendConfigFileToDCSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadConfigFileFromDC">
+      <wsdl:input message="tns:LoadConfigFileFromDCSoapIn" />
+      <wsdl:output message="tns:LoadConfigFileFromDCSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteConfigFile">
+      <wsdl:input message="tns:DeleteConfigFileSoapIn" />
+      <wsdl:output message="tns:DeleteConfigFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendAlarm">
+      <wsdl:input message="tns:SendAlarmSoapIn" />
+      <wsdl:output message="tns:SendAlarmSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAlarmByServerName">
+      <wsdl:input message="tns:GetAlarmByServerNameSoapIn" />
+      <wsdl:output message="tns:GetAlarmByServerNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InserAlarmWaitingClear">
+      <wsdl:input message="tns:InserAlarmWaitingClearSoapIn" />
+      <wsdl:output message="tns:InserAlarmWaitingClearSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAlarmWaitingClear">
+      <wsdl:input message="tns:UpdateAlarmWaitingClearSoapIn" />
+      <wsdl:output message="tns:UpdateAlarmWaitingClearSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendClearAlarm">
+      <wsdl:input message="tns:SendClearAlarmSoapIn" />
+      <wsdl:output message="tns:SendClearAlarmSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddConfigPort">
+      <wsdl:input message="tns:AddConfigPortSoapIn" />
+      <wsdl:output message="tns:AddConfigPortSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConfigPortList">
+      <wsdl:input message="tns:GetConfigPortListSoapIn" />
+      <wsdl:output message="tns:GetConfigPortListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteConfigPortList">
+      <wsdl:input message="tns:DeleteConfigPortListSoapIn" />
+      <wsdl:output message="tns:DeleteConfigPortListSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="FaultManagementServiceSoap" type="tns:FaultManagementServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SendFileToDC">
+      <soap:operation soapAction="http://tempuri.org/SendFileToDC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadFileFromDC">
+      <soap:operation soapAction="http://tempuri.org/LoadFileFromDC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendMonitorFileToDC">
+      <soap:operation soapAction="http://tempuri.org/SendMonitorFileToDC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadMonitorFileFromDC">
+      <soap:operation soapAction="http://tempuri.org/LoadMonitorFileFromDC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendConfigFileToDC">
+      <soap:operation soapAction="http://tempuri.org/SendConfigFileToDC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadConfigFileFromDC">
+      <soap:operation soapAction="http://tempuri.org/LoadConfigFileFromDC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteConfigFile">
+      <soap:operation soapAction="http://tempuri.org/DeleteConfigFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendAlarm">
+      <soap:operation soapAction="http://tempuri.org/SendAlarm" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAlarmByServerName">
+      <soap:operation soapAction="http://tempuri.org/GetAlarmByServerName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InserAlarmWaitingClear">
+      <soap:operation soapAction="http://tempuri.org/InserAlarmWaitingClear" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAlarmWaitingClear">
+      <soap:operation soapAction="http://tempuri.org/UpdateAlarmWaitingClear" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendClearAlarm">
+      <soap:operation soapAction="http://tempuri.org/SendClearAlarm" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddConfigPort">
+      <soap:operation soapAction="http://tempuri.org/AddConfigPort" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConfigPortList">
+      <soap:operation soapAction="http://tempuri.org/GetConfigPortList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteConfigPortList">
+      <soap:operation soapAction="http://tempuri.org/DeleteConfigPortList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="FaultManagementServiceSoap12" type="tns:FaultManagementServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SendFileToDC">
+      <soap12:operation soapAction="http://tempuri.org/SendFileToDC" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadFileFromDC">
+      <soap12:operation soapAction="http://tempuri.org/LoadFileFromDC" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendMonitorFileToDC">
+      <soap12:operation soapAction="http://tempuri.org/SendMonitorFileToDC" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadMonitorFileFromDC">
+      <soap12:operation soapAction="http://tempuri.org/LoadMonitorFileFromDC" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendConfigFileToDC">
+      <soap12:operation soapAction="http://tempuri.org/SendConfigFileToDC" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadConfigFileFromDC">
+      <soap12:operation soapAction="http://tempuri.org/LoadConfigFileFromDC" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteConfigFile">
+      <soap12:operation soapAction="http://tempuri.org/DeleteConfigFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendAlarm">
+      <soap12:operation soapAction="http://tempuri.org/SendAlarm" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAlarmByServerName">
+      <soap12:operation soapAction="http://tempuri.org/GetAlarmByServerName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InserAlarmWaitingClear">
+      <soap12:operation soapAction="http://tempuri.org/InserAlarmWaitingClear" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAlarmWaitingClear">
+      <soap12:operation soapAction="http://tempuri.org/UpdateAlarmWaitingClear" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendClearAlarm">
+      <soap12:operation soapAction="http://tempuri.org/SendClearAlarm" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddConfigPort">
+      <soap12:operation soapAction="http://tempuri.org/AddConfigPort" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConfigPortList">
+      <soap12:operation soapAction="http://tempuri.org/GetConfigPortList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteConfigPortList">
+      <soap12:operation soapAction="http://tempuri.org/DeleteConfigPortList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="FaultManagementService">
+    <wsdl:port name="FaultManagementServiceSoap" binding="tns:FaultManagementServiceSoap">
+      <soap:address location="http://10.239.220.166/DCWebServiceAPI/FaultManagementService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="FaultManagementServiceSoap12" binding="tns:FaultManagementServiceSoap12">
+      <soap12:address location="http://10.239.220.166/DCWebServiceAPI/FaultManagementService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,623 @@
+﻿/*tom+.a.2012-02-08*/
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	background-color:#FFFFFF;
+	margin-top:0px;
+	margin-left:0px;
+}
+.dvtCellLabel, .cellLabel 
+{
+	font-weight: bold; 
+	font-size: 11px; 
+	font-family: Arial, Helvetica, sans-serif;
+	text-align:left;
+	color: #666666;
+	padding-left:10px;
+	padding-right:10px;
+	/*border-bottom:1px solid #DEDEDE;
+	border-left:1px solid #DEDEDE;
+	border-right:1px solid #DEDEDE;*/
+	white-space:nowrap;
+	font-family : Verdana;
+	
+}
+
+.dvtCellLabel_detail
+{
+	font-weight: bold; 
+	font-size: 11px; 
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: center;
+	color: #666666;
+	padding-left:10px;
+	padding-right:10px;
+	/*border-bottom:1px solid #DEDEDE;
+	border-left:1px solid #DEDEDE;
+	border-right:1px solid #DEDEDE;*/
+	white-space:nowrap;
+	font-family : Verdana;
+	
+}
+.dvtCellLabel_Header
+{
+	font-weight: bold; 
+	font-size: 14px; 
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: center;
+	color: #666666;
+	/*padding-left:10px;
+	padding-right:10px;
+	border-bottom:1px solid #DEDEDE;
+	border-left:1px solid #DEDEDE;
+	border-right:1px solid #DEDEDE;*/
+	white-space:nowrap;
+	font-family : Verdana;
+    text-decoration :underline;
+    height:30px;
+    vertical-align:middle;
+	
+}
+.dvtCellLabel_countrecord
+{
+	font-weight: bold; 
+	font-size: 11px; 
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: left;
+	color: #666666;
+	padding-left:10px;
+	padding-right:10px;
+	border-bottom:1px solid #DEDEDE;
+	border-left:1px solid #DEDEDE;
+	border-right:1px solid #DEDEDE;
+	white-space:nowrap;
+	font-family : Verdana;
+	
+}
+.dvtCellInfo, .cellInfo {
+	padding-left:10px;
+	padding-right:10px;
+	/*
+	border-bottom:1px solid #dedede;	
+	border-right:1px solid #dedede;
+	border-left:1px solid #dedede;
+	*/
+	text-align:left;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-family : Verdana;
+}
+.dvtCellInfo_detail {
+	padding-left:10px;
+	padding-right:10px;
+	border-bottom:1px solid #dedede;	
+	border-right:1px solid #dedede;
+	border-left:1px solid #dedede;
+	text-align:center;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-family : Verdana;
+}
+.detailedViewTextBox {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;
+	border:1px solid #bababa;
+	padding-left:5px;
+	background-color:#ffffff;
+	font-family : Verdana;
+	margin-top: 0px;
+}
+.detailedViewTextBoxOn {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;
+	border:1px solid #bababa;
+	padding-left:5px;
+	background-color:#F2FDEC;
+	font-size: 11px;
+	font-family : Verdana;
+}
+
+.TextView
+{
+    font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;
+	border:1px solid #bababa;
+	padding-left:5px;
+	background-color:#EEEEEE;
+	font-family : Verdana;
+	margin-top: 0px;
+	vertical-align: baseline;
+}
+.dvInnerHeader
+{
+	BACKGROUND-IMAGE: url('images/Line-Header_long.jpg'); 
+	HEIGHT:20px; 
+	TEXT-ALIGN: left;
+	font-family : Verdana;
+	font-size:14px;
+	color : #171313;
+	font-weight : bold;
+	text-decoration:underline;
+	/*
+	BORDER-RIGHT:  #DEDEDE 1px solid; 
+	BORDER-TOP:  #DEDEDE 1px solid; 
+	BORDER-LEFT:  #DEDEDE 1px solid; 
+	BORDER-BOTTOM:  #DEDEDE 1px solid;
+	*/
+	font-family : Verdana;
+	
+}
+.tableHeader
+{ 
+	width: 800px; 
+	font-family : Verdana;
+	font-size:14px;
+	color:#171313;
+	height:40px;
+	text-align:left;
+	
+}
+.hr_header
+{
+	width:auto;
+	color:White;
+	height:1px;
+
+}
+.tabheader
+{
+	HEIGHT:20px; 
+	TEXT-ALIGN: left;
+	font-family : Verdana;
+	font-size:16px;
+	color : #666666 ;
+	font-weight : bold ;
+	
+}
+.Grid_inq
+{
+	border: solid 2px #000000;
+	width:795px;
+}
+.Grid_inqHeader
+{
+	background-color: #0066FF;
+	font: bold 15px Verdana;
+	color: White;
+	text-align: center;
+	height: 28px;
+	
+
+}
+.Grid_inqItem
+{
+   background-color: #99FFFF;
+   border-style : none;
+   font : normal 11px Verdana;
+   color : #4A4550;
+   padding-left: 10px;
+   height:28px;
+}
+.Grid_inqItem td,.Grid_inqAltItem td,.Grid_inqHeader td
+{
+	border: solid 1px #000000;
+}
+.Grid_inqAltItem
+{
+   background-color:#CCFFFF;
+   border-style : none;
+   font : normal 11px Verdana;
+   color : #4A4550;
+   padding-left: 10px;
+   height:28px;
+   border-color:#047700;
+}
+.Grid_inqPager
+{
+	text-align : left ;
+	margin-right : 50px;
+	font : normal 14px Verdana;
+	color : #4A4550;
+}
+.Grid_GennerateinqItem
+{
+   background-color: White;
+   border-style : none;
+   font : normal 11px Verdana;
+   color : #4A4550;
+   padding-left: 10px;
+   height:28px;
+}
+.Grid_GennerateinqItem td,.Grid_GennerateinqAltItem td,.Grid_GennerateinqHeader td
+{
+	border: solid 1px #000000;
+}
+.Grid_GennerateinqAltItem
+{
+   background-color:White;
+   border-style : none;
+   font : normal 11px Verdana;
+   color : #4A4550;
+   padding-left: 10px;
+   height:28px;
+   border-color:#047700;
+}
+
+.Grid_TdHeader
+{
+	 border-color:#9BBB59;
+	 border-style:Solid ;
+	 border-width:1px;
+	 background-color:#9BBB59;
+	 font-weight:bold;
+	 color:#5B442A;
+	 font-size:16px;
+	 font-family:Verdana;
+	 text-align:center;
+}
+.Grid_TD_FirstRow
+{	
+	border-bottom-color:#9BBB59; 
+	border-bottom-style:solid; 
+	border-bottom-width:2px;
+    border-top-color:#9BBB59; 
+    border-top-style:solid; 
+    border-top-width:2px;
+    border-left-color:#9BBB59; 
+    border-left-style:solid; 
+    border-left-width:2px;
+    border-right-color:#9BBB59; 
+    border-right-style:solid; 
+    border-right-width:2px; 
+	border-style : none;
+	border-color:#9BBB59;
+    font-family:Verdana; 
+    font-size:15px; 
+    font-weight:bold ; 
+    color:#5B442A;
+}
+.Grid_TD
+{
+	border-bottom-color:#9BBB59; 
+	border-bottom-style:solid; 
+	border-bottom-width:2px;
+	border-left-color:#9BBB59; 
+	border-left-style:solid; 
+	border-left-width:2px;
+	border-right-color:#9BBB59; 
+	border-right-style:solid; 
+	border-right-width:2px; 
+	font-family:Verdana; 
+	font-size:15px; 
+	font-weight:bold ; 
+	color:#5B442A;
+}
+.Grid_TD_LastRow
+{
+	border-bottom-color:#9BBB59; 
+	border-bottom-style:solid; 
+	border-bottom-width:2px;
+    border-left-color:#9BBB59; 
+    border-left-style:solid; 
+    border-left-width:2px;
+    border-right-color:#9BBB59; 
+    border-right-style:solid; 
+    border-right-width:2px; 
+    font-family:Verdana; 
+    font-size:15px; 
+    font-weight:bold ; 
+    color:#5B442A;
+}
+
+.Treeview
+{ font-family:Verdana;
+  font-size:14px;
+  color:Black;
+  
+}
+.Grid_TD_FirstRowOneColumn
+{
+	border-bottom-color:#9BBB59; 
+	border-bottom-style:solid; 
+	border-bottom-width:2px;
+    border-top-color:#9BBB59; 
+    border-top-style:solid; 
+    border-top-width:2px;
+    border-left-color:#9BBB59; 
+    border-left-style:solid; 
+    border-left-width:2px;
+    border-right-color:#9BBB59; 
+    border-right-style:solid; 
+    border-right-width:2px; 
+    font-family:Verdana; 
+    font-size:15px; 
+    font-weight:bold ; 
+    color:White;
+    background-color:#9BBB59;
+    height:35px;
+}
+.Grid_TD_LastRowLeft
+{
+	border-bottom-color:#9BBB59; 
+	border-bottom-style:solid; 
+	border-bottom-width:2px;
+    border-left-color:#9BBB59; 
+    border-left-style:solid; 
+    border-left-width:2px;
+    font-family:Verdana; 
+    font-size:15px;  
+    color:#5B442A;
+    height:30px;
+}
+.Grid_TD_LastRowRight
+{
+	border-bottom-color:#9BBB59; 
+	border-bottom-style:solid; 
+	border-bottom-width:2px;
+    border-right-color:#9BBB59; 
+    border-right-style:solid; 
+    border-right-width:2px;
+    font-family:Verdana; 
+    font-size:15px;  
+    color:#5B442A;
+    height:30px;
+}
+.Grid_DetailHeader
+{
+	 border-color:#9BBB59;
+	 border-style:solid ;
+	 border-width:2px;
+	 background-color:#9BBB59;
+	 font-weight:bold;
+	 color:White;
+	 font-size:16px;
+	 font-family:Verdana;
+	 text-align:center;
+	 height:30px;
+}
+.Grid_DetailItem
+{
+	font-family:Verdana; 
+    font-size:15px; 
+    padding-left:5px;
+    color:black;
+    border: none 3px #9BBB59;
+    height:20px;
+}
+.Grid_Detail
+{
+	border: none 3px #9BBB59;
+	font-family:Verdana; 
+	font-size:15px; 
+	padding-left:5px;
+	color:black;
+}
+.Grid_DetailItem td
+
+{
+	border: solid 2px #9BBB59; 
+	padding-left:30px;
+}
+/*updateprogress*/
+.uProg_modalPopup 
+{
+	position: fixed;
+    top: 30%;
+    left: 40%;        	
+    background-color: #ffffdd;
+    border-width: 3px;
+    border-style: solid;
+    border-color: Gray;
+    padding: 15px;
+    width: 300px;
+    z-index: 1001;
+    box-shadow: 7px 7px 8px #000000;
+    
+    -webkit-box-shadow: 7px 7px 8px #000000;
+    -moz-box-shadow: 7px 7px 8px #000000;
+    filter: progid:DXImageTransform.Microsoft.dropShadow(color=#000000, offX=7, offY=7, positive=true);
+}
+
+.uProg_modalBackground 
+{
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	width: 100%;
+	height: 100%;
+	background-color: Gray;
+    filter: alpha(opacity=70);
+    opacity: 0.7;
+}
+.uProg_modalText 
+{
+	font-weight: bold;
+}
+.uProg_messageDiv 
+{
+	text-align: center;
+	padding: 10px;
+}
+.uProg_progressDiv
+{
+	text-align: center;
+}
+.uProg_abortDiv 
+{
+	text-align: center;
+	padding: 10px;
+}
+/*updateprogress*/
+
+.table_view 
+{
+	border-left: solid 1px black;
+	border-right: solid 1px black;
+	border-top: solid 1px black;
+	border-bottom: solid 1px black;
+	font-family:Verdana;
+	color:Gray;
+	font-size:12px;
+	vertical-align:text-top;
+}
+
+.table_view td
+{
+	border: solid 1px black;
+	
+}
+.table_view_bg
+{
+	 background-color: #ACEEAC;
+	 font-family:Verdana;
+	 color:black;
+	 font-size:16px;
+	 text-align:center;
+}
+
+ .rotate_text
+      {
+			 -moz-transform:rotate(-90deg); 
+			 -moz-transform-origin: top left;
+			 -webkit-transform: rotate(-90deg);
+			 -webkit-transform-origin: top left;
+			 -o-transform: rotate(-90deg);
+			 -o-transform-origin:  top left;
+			  position:relative;
+			top: 30px;
+			left: 0px;
+			height: 49px;
+}
+.rotated_cell
+      {
+         vertical-align:bottom;       
+      }
+      
+.gridassignmentitem
+{
+	background-color:#ffffff;
+	border:solid 1px #000000;
+}
+.gridassignmentitem td
+{
+	background-color:#ffffff;
+	border:solid 1px #000000;
+	color:#000000;
+}
+.gridassheader
+{
+	font-family: Verdana; 
+	font-size: 13px; 
+	height: 30px; 
+    text-align: center; 
+    font-weight: bold; 
+    width: 80px; 
+    color:#ffffff;
+}
+.gridassheader td
+{
+	
+	border: solid 1px #000000;
+	color:#ffffff;
+}
+
+.label {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;
+	padding-left:5px;
+	font-size: 11px;
+	font-family : Verdana;
+}
+
+.arrowlistmenu{
+    width: 600px; /*width of accordion menu*/
+}
+
+.arrowlistmenu .menuheader{ /*CSS class for menu headers in general (expanding or not!)*/
+    font: bold 14px Arial;
+    color: #2f3e74;
+    /*background: black url(titlebar.png) repeat-x center left;
+    margin-bottom: 10px; /*bottom spacing between header and rest of content*/
+    text-transform: uppercase;
+    padding: 4px 0 4px 10px; /*header text is indented 10px*/
+    /*cursor: hand;
+    cursor: pointer;*/
+}
+
+.arrowlistmenu .openheader{ /*CSS class to apply to expandable header when it's expanded*/
+    background-image: url(titlebar-active.png);
+}
+
+.arrowlistmenu ul{ /*CSS for UL of each sub menu*/
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 8px; /*bottom spacing between each UL and rest of content*/
+    color: #ec008c;
+}
+
+.arrowlistmenu ul li{
+    padding-bottom: 2px; /*bottom spacing between menu items*/
+}
+
+.arrowlistmenu ul li .opensubheader{ /*Open state CSS for sub menu header*/
+    background: lightblue !important;
+}
+
+.arrowlistmenu ul li .closedsubheader{ /*Closed state CSS for sub menu header*/
+    background: lightgreen !important;
+}
+
+.arrowlistmenu ul li a{
+    color: #A70303;
+    background: url(arrowbullet.png) no-repeat center left; /*custom bullet list image*/
+    display: block;
+    padding: 2px 0;
+    padding-left: 19px; /*link text is indented 19px*/
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 1px solid #dadada;
+    font-size: 90%;
+}
+
+.arrowlistmenu ul li a:visited{
+    color: #A70303;
+}
+
+.arrowlistmenu ul li a:hover{ /*hover state CSS*/
+    background-color: #F3F3F3;
+}
+
+.arrowlistmenu ul li a.subexpandable:hover{ /*hover state CSS for sub menu header*/
+    background: lightblue;
+}
+
+.DivBoxShadow {
+ -moz-box-shadow: 0 0 5px 5px #888;
+ -webkit-box-shadow: 0 0 5px 5px#888;
+ -webkit-border-radius: 8px;
+ -moz-border-radius: 8px;
+ background:#ffffff;
+ border-radius: 8px;
+ box-shadow: 0 0 5px 5px #888;
+ /*behavior: url(../Template/PIE.htc);*/
+ }
+ 
+ .DivBoxRaius {
+ -webkit-border-radius: 5px;
+ -moz-border-radius: 5px;
+ border: solid 1px #88B526;
+ background:#ffffff;
+ border-radius: 5px;
+ /*behavior: url(../Template/PIE.htc);*/
+ }
+ 
+ .zHidden
+{
+    display: none;
+}

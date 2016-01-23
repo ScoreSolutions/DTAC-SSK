@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetFileByteStreamFromDC">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FilePath" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFileByteStreamFromDCResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFileByteStreamFromDCResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFileInfoFromDC">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EventDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ShopAbb" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TargetType" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFileInfoFromDCResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFileInfoFromDCResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateTransferStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FileScheduleID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateTransferStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateTransferStatusResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ErrorMessage">
+        <s:complexType />
+      </s:element>
+      <s:element name="ErrorMessageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ErrorMessageResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBillerLogoFile">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetBillerLogoFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBillerLogoFileResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteBillerLogoFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FileName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteBillerLogoFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteBillerLogoFileResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetFileByteStreamFromDCSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFileByteStreamFromDC" />
+  </wsdl:message>
+  <wsdl:message name="GetFileByteStreamFromDCSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFileByteStreamFromDCResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFileInfoFromDCSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFileInfoFromDC" />
+  </wsdl:message>
+  <wsdl:message name="GetFileInfoFromDCSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFileInfoFromDCResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateTransferStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateTransferStatus" />
+  </wsdl:message>
+  <wsdl:message name="UpdateTransferStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateTransferStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="ErrorMessageSoapIn">
+    <wsdl:part name="parameters" element="tns:ErrorMessage" />
+  </wsdl:message>
+  <wsdl:message name="ErrorMessageSoapOut">
+    <wsdl:part name="parameters" element="tns:ErrorMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBillerLogoFileSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBillerLogoFile" />
+  </wsdl:message>
+  <wsdl:message name="GetBillerLogoFileSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBillerLogoFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteBillerLogoFileSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteBillerLogoFile" />
+  </wsdl:message>
+  <wsdl:message name="DeleteBillerLogoFileSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteBillerLogoFileResponse" />
+  </wsdl:message>
+  <wsdl:portType name="EquipmentFileServiceSoap">
+    <wsdl:operation name="GetFileByteStreamFromDC">
+      <wsdl:input message="tns:GetFileByteStreamFromDCSoapIn" />
+      <wsdl:output message="tns:GetFileByteStreamFromDCSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFileInfoFromDC">
+      <wsdl:input message="tns:GetFileInfoFromDCSoapIn" />
+      <wsdl:output message="tns:GetFileInfoFromDCSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTransferStatus">
+      <wsdl:input message="tns:UpdateTransferStatusSoapIn" />
+      <wsdl:output message="tns:UpdateTransferStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ErrorMessage">
+      <wsdl:input message="tns:ErrorMessageSoapIn" />
+      <wsdl:output message="tns:ErrorMessageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBillerLogoFile">
+      <wsdl:input message="tns:GetBillerLogoFileSoapIn" />
+      <wsdl:output message="tns:GetBillerLogoFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBillerLogoFile">
+      <wsdl:input message="tns:DeleteBillerLogoFileSoapIn" />
+      <wsdl:output message="tns:DeleteBillerLogoFileSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="EquipmentFileServiceSoap" type="tns:EquipmentFileServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetFileByteStreamFromDC">
+      <soap:operation soapAction="http://tempuri.org/GetFileByteStreamFromDC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFileInfoFromDC">
+      <soap:operation soapAction="http://tempuri.org/GetFileInfoFromDC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTransferStatus">
+      <soap:operation soapAction="http://tempuri.org/UpdateTransferStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ErrorMessage">
+      <soap:operation soapAction="http://tempuri.org/ErrorMessage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBillerLogoFile">
+      <soap:operation soapAction="http://tempuri.org/GetBillerLogoFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBillerLogoFile">
+      <soap:operation soapAction="http://tempuri.org/DeleteBillerLogoFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="EquipmentFileServiceSoap12" type="tns:EquipmentFileServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetFileByteStreamFromDC">
+      <soap12:operation soapAction="http://tempuri.org/GetFileByteStreamFromDC" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFileInfoFromDC">
+      <soap12:operation soapAction="http://tempuri.org/GetFileInfoFromDC" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTransferStatus">
+      <soap12:operation soapAction="http://tempuri.org/UpdateTransferStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ErrorMessage">
+      <soap12:operation soapAction="http://tempuri.org/ErrorMessage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBillerLogoFile">
+      <soap12:operation soapAction="http://tempuri.org/GetBillerLogoFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBillerLogoFile">
+      <soap12:operation soapAction="http://tempuri.org/DeleteBillerLogoFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="EquipmentFileService">
+    <wsdl:port name="EquipmentFileServiceSoap" binding="tns:EquipmentFileServiceSoap">
+      <soap:address location="http://akkarawatp/webtms/EquipmentFileService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="EquipmentFileServiceSoap12" binding="tns:EquipmentFileServiceSoap12">
+      <soap12:address location="http://akkarawatp/webtms/EquipmentFileService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

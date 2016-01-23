@@ -1,0 +1,147 @@
+﻿<%@ Master Language="VB" CodeFile="TemplateMaster.master.vb" Inherits="TemplateMaster" %>
+<%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="asp" %>
+<%@ Register Assembly="DotNetSources.Web.UI" Namespace="DotNetSources.Web.UI" TagPrefix="cc1" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="Template/style.css" />
+    <link rel="stylesheet" type="text/css" href="Template/StyleSheet.css" />
+    <script language="javascript" src="Template/JScript.js" type="text/javascript"></script>
+    <style type="text/css">
+        .style2
+        {
+            width: 183px;
+            height: 62px;
+        }
+    </style>
+     <style type="text/css">
+        .arrowlistmenu{
+        width: 200px; /*width of accordion menu*/
+        }
+        .arrowlistmenu .menuheader{ /*CSS class for menu headers in general (expanding or not!)*/
+        font: bold 14px Arial;
+        color: black;
+        /*background: black url(titlebar.png) repeat-x center left;
+        margin-bottom: 10px; /*bottom spacing between header and rest of content*/
+        text-transform: uppercase;
+        padding: 4px 0 4px 10px; /*header text is indented 10px*/
+        cursor: hand;
+        cursor: pointer;
+        }
+        .arrowlistmenu .openheader{ /*CSS class to apply to expandable header when it's expanded*/
+        background-image: url(titlebar-active.png);
+        }
+        .arrowlistmenu ul{ /*CSS for UL of each sub menu*/
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        margin-bottom: 8px; /*bottom spacing between each UL and rest of content*/
+        }
+        .arrowlistmenu ul li{
+        padding-bottom: 2px; /*bottom spacing between menu items*/
+        }
+        .arrowlistmenu ul li .opensubheader{ /*Open state CSS for sub menu header*/
+        background: lightblue !important;
+        }
+        .arrowlistmenu ul li .closedsubheader{ /*Closed state CSS for sub menu header*/
+        background: lightblue !important;
+        }
+        .arrowlistmenu ul li a{
+        color: #A70303;
+        background: url(arrowbullet.png) no-repeat center left; /*custom bullet list image*/
+        display: block;
+        padding: 2px 0;
+        padding-left: 19px; /*link text is indented 19px*/
+        text-decoration: none;
+        font-weight: bold;
+        border-bottom: 1px solid #dadada;
+        font-size: 90%;
+        }
+        .arrowlistmenu ul li a:visited{
+        color: #A70303;
+        }
+        .arrowlistmenu ul li a:hover{ /*hover state CSS*/
+        background-color: #F3F3F3;
+        }
+        .arrowlistmenu ul li a.subexpandable:hover{ /*hover state CSS for sub menu header*/
+        background: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server"  style="vertical-align:top">
+        <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server">
+        </asp:ToolkitScriptManager>
+    
+        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+            <ContentTemplate>
+                <table border="0" width="100%" style="background-image:url(images/bg_top.jpg);background-repeat:no-repeat;">
+                    <tr>
+                        <td class="style2" >
+                            
+                        </td>
+                        <td valign="bottom" align="right">
+                            <asp:Button ID="btnLogout" runat="server" CssClass="formDialog" Height="20px" Text="Logout" TabIndex="888"/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                        </td>
+                    </tr>     
+                    <tr style="height:45px" >
+                        <td colspan="2">&nbsp;</td>
+                    </tr>           
+                    <tr>
+                        <td width="100%" align="center" valign="top" nowrap="nowrap" colspan="2" >
+                            <table border="0"  width="1000"  cellpadding="0" cellspacing="0"  align="center" >
+                                <tr>
+                                    <td width="200px" valign="top" align="left" >
+                                        <table width="100%" cellpadding="0" cellspacing="0" style="border:solid 1px #88B526" class="DivBoxRaius" >
+                                            <tr >
+                                                <td >
+                                                    &nbsp;
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td valign="top">
+                                                    <asp:Label ID="lblMenu" runat="server" ></asp:Label>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td width="10px">&nbsp;</td>
+                                    <td valign="top"  >
+                                        <div class="DivBoxShadow"  >
+                                            <table width="100%" border="0" cellpadding="0" cellspacing="0" >   
+                                                <tr>
+                                                    <td width="15px" >&nbsp;</td>
+                                                    <td>&nbsp;</td>
+                                                    <td width="15px" >&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>&nbsp;</td>
+                                                    <td style="height: 30px;  text-align:center">
+                                                        <cc1:CustomUpdateProgress ID="progress" runat="server"  
+                                                        ProgressImage="~/images/progress.gif" Delay="1"  />
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>&nbsp;</td>
+                                                    <td>
+                                                        <asp:ContentPlaceHolder runat="server" ID="maincontent"></asp:ContentPlaceHolder>
+                                                    </td>
+                                                    <td width="15px" >&nbsp;</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+           </ContentTemplate>
+        </asp:UpdatePanel>
+    </form>
+</body>
+</html>
